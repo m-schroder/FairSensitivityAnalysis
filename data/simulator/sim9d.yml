@@ -1,0 +1,15 @@
+# === Standard Fairness causal graph with unobserved confounders: Sensitive attribute, Outcome, Confounder, Mediator ===
+# nodes
+UIE: gaussian(mu_=3, sigma_=0.0000001)
+Z: bernoulli(p_=0.5) 
+A: bernoulli(p_=5Z-UIE), correction[lower=0.02, upper=0.98]
+M: bernoulli(p_=5A+Z-UIE), correction[lower=0.02, upper=0.98]
+Y: bernoulli(p_=0.5A+0.5Z+5M), correction[lower=0.02, upper=0.98]
+A->M: identity()
+M->Y: identity()
+A->Y: identity()
+Z->Y: identity()
+Z->A: identity()
+Z->M: identity()
+UIE->M: identity()
+UIE->A: identity()
