@@ -7,7 +7,9 @@ The **folder structure** is as follows:
 - *modules*: Python scripts including the prediction models, helper functions for calculating the bounds, plotting and evaluation
 - *notebooks*: Jupyter notebooks for data simulation, pre-processing and model training
 
-<img src="graphics/general_fairness_graph.png" width="500">
+<p align="center">
+  <img src="graphics/general_fairness_graph.png" width="300">
+</p>
 
 **Abstract**:
 
